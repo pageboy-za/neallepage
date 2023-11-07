@@ -1,0 +1,23 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+type Props = HTMLAttributes<"button">;
+---
+
+<div class="relative">
+  <button
+    id="menuButton"
+    class="bg-raisin_black-100 z-20 flex shrink-0 grow-0 justify-around
+                  fixed bottom-5 right-5 rounded-lg border-2 border-baby_powder"
+  >
+    <span class="px-2 text-2xl font-bold text-baby_powder">Menu</span>
+  </button>
+
+  <script>
+    const menuButton = document.getElementById("menuButton");
+    menuButton!.addEventListener("click", () => {
+      const navi = document.getElementById("navmenu");
+      navi!.classList.toggle("hidden");
+    });
+  </script>
+</div>

@@ -1,0 +1,37 @@
+---
+const heroImage = "/Nealle.webp";
+const heroImageAlt = "Nealle Page";
+const heroText = "With Fintech, eCommerce,and SaaS experience";
+const tagline =
+  "An experienced Product Manager that loves solving complex problems and building products that people love.";
+---
+
+<article class="bg-raisin-black">
+  <div
+    class="min-h-[50vh] bg-jet-100 p-1 border-8 rounded-lg border-baby_powder"
+  >
+    <div class="p-2 flex flex-col md:flex-row rounded-lg">
+      <div
+        id="left"
+        class="w-full md:w-2/3 text-baby_powder rounded-md justify-between"
+      >
+        <h1 class="tracking-tight leading-1 text-2xl md:text-4xl">
+          🧑‍🚀 Hello, I'm Nealle 🚀
+        </h1>
+        <h2 class="text-2xl md:text-4xl font-bold">
+          {tagline}
+        </h2>
+        <p class="text-2xl">{heroText}</p>
+      </div>
+      <div id="right" class="w-full md:w-1/3 h-auto">
+        <img
+          src={heroImage}
+          alt={heroImageAlt}
+          width={1024}
+          height={1024}
+          class="rounded-XL"
+        />
+      </div>
+    </div>
+  </div>
+</article>
