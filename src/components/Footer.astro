@@ -2,15 +2,19 @@
 const today = new Date();
 ---
 
-<footer>
+<footer class="text-center bg-zinc-900 text-slate-300">
   &copy; {today.getFullYear()} Nealle Page. All rights reserved.
-  <div class="social-links">
-    <a href="https://linkedin.co.uk/in/neallepage" target="_blank">
+  <div class="flex justify-center social-links">
+    <a
+      href="https://linkedin.co.uk/in/neallepage"
+      target="_blank"
+      class="hover:text-slate-500"
+    >
       <span class="sr-only">Follow Nealle on LinkedIn</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        width="32"
+        height="32"
         viewBox="0 0 24 24"
       >
         <path
@@ -19,12 +23,16 @@ const today = new Date();
         ></path>
       </svg>
     </a>
-    <a href="mailto:hello@nealle.page" target="_blank">
+    <a
+      href="mailto:hello@nealle.page"
+      target="_blank"
+      class="hover:text-slate-500"
+    >
       <span class="sr-only">Email Nealle</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        width="32"
+        height="32"
         viewBox="0 0 24 24"
       >
         <path
@@ -36,22 +44,11 @@ const today = new Date();
     <style>
       footer {
         padding: 2em 1em 6em 1em;
-        background: rgb(var(--raisin-black));
-        color: rgb(var(--gray-light));
-        text-align: center;
       }
       .social-links {
-        display: flex;
         justify-content: center;
         gap: 1em;
         margin-top: 1em;
-      }
-      .social-links a {
-        text-decoration: none;
-        color: rgb(var(--gray-light));
-      }
-      .social-links a:hover {
-        color: rgb(var(--gray));
       }
     </style>
   </div>

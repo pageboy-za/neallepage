@@ -1,0 +1,62 @@
+---
+import { menuItems } from "../consts";
+
+import MenuItem from "./MenuItem.astro";
+---
+
+<div class="relative">
+  <button
+    type="button"
+    class="inline-flex items-center text-sm font-semibold text-white gap-x-1 leading-6"
+    aria-expanded="false"
+    id="menuButton"
+  >
+    <span class="text-white">Menu</span>
+    <svg
+      class="w-5 h-5"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+        clip-rule="evenodd"></path>
+    </svg>
+  </button>
+
+  <!--
+    Flyout menu, show/hide based on flyout menu state.
+
+    Entering: "transition ease-out duration-200"
+      From: "opacity-0 translate-y-1"
+      To: "opacity-100 translate-y-0"
+    Leaving: "transition ease-in duration-150"
+      From: "opacity-100 translate-y-0"
+      To: "opacity-0 translate-y-1"
+  -->
+  <script>
+    const menuButton = document.getElementById("menuButton");
+    menuButton!.addEventListener("click", () => {
+      const navi = document.getElementById("navmenu");
+      navi!.classList.toggle("hidden");
+    });
+  </script>
+
+  <div
+    id="navmenu"
+    class="absolute z-10 flex w-screen px-4 mt-5 left-1/2 max-w-min -translate-x-1/2"
+  >
+    <div
+      class="w-56 p-4 text-sm font-semibold text-gray-900 bg-white shadow-lg shrink rounded-xl leading-6 ring-1 ring-gray-900/5"
+    >
+      <div class="">
+        {
+          menuItems.items.map((data) => (
+            <MenuItem name={data.name} url={data.url} />
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</div>

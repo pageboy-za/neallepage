@@ -1,10 +1,11 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Menu from "../components/Menu.astro";
+import Menu from "../components/newMenu.astro";
 import HomePageHero from "../components/HomePageHero.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import MenuButton from "../components/MenuButton.astro";
+import BlogLatest from "../components/BlogLatest.astro";
+import MenuLG from "../components/MenuLG.astro";
 ---
 
 <!doctype html>
@@ -12,11 +13,17 @@ import MenuButton from "../components/MenuButton.astro";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="bg-raisin_black">
+  <body class="bg-slate-50">
     <main class="container w-full">
       <HomePageHero />
     </main>
+    <section id="Menu" class="relative">
+      <MenuLG />
+    </section>
+    <section id="blogLatest">
+      <BlogLatest />
+    </section>
     <Footer />
-    <Menu />
+    <!-- <Menu /> -->
   </body>
 </html>

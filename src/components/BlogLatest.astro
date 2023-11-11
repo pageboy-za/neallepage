@@ -1,0 +1,20 @@
+---
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<article class="bg-slate-200 text-slate-950">
+  <h1 class="font-serif text-2xl font-bold">The latest from my blog</h1>
+  <ul>
+    ${
+      posts.map((post) => (
+        <li>
+          <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</article>

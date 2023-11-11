@@ -1,33 +1,16 @@
 ---
-const menuItems = {
-  items: [
-    {
-      name: "Home",
-      url: "/",
-    },
-    {
-      name: "About",
-      url: "/about",
-    },
-    {
-      name: "Blog",
-      url: "/blog",
-    },
-    {
-      name: "Contact",
-      url: "/contact",
-    },
-  ],
-};
+import { menuItems } from "../consts";
 
 import MenuButton from "./MenuButton.astro";
 import MenuItem from "./MenuItem.astro";
 ---
 
-<MenuButton />
-<article id="navmenu" class="hidden fixed top-0 left-0 z-10 mx-auto">
+<div class="relative">
+  <MenuButton />
+</div>
+<article id="navmenu" class="absolute hidden mx-auto z-999">
   <nav class="text-baby_powder bg-jet-100/90">
-    <div class="h-screen w-screen grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="">
       {
         menuItems.items.map((data) => (
           <MenuItem name={data.name} url={data.url} />
