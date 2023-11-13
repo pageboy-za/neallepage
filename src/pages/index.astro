@@ -14,13 +14,13 @@ import MenuLG from "../components/MenuLG.astro";
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body class="bg-slate-200">
-    <main class="">
+    <main class="container mx-auto pb-0">
       <HomePageHero />
     </main>
-    <section id="Menu">
+    <section id="Menu" class="container mx-auto">
       <MenuLG />
     </section>
-    <section id="blogLatest">
+    <section id="blogLatest" class="container mx-auto pt-6">
       <BlogLatest />
     </section>
     <Footer />
