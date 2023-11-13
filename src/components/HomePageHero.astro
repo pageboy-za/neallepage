@@ -1,36 +1,33 @@
 ---
-const heroImage = "/NeallePageHS.webp";
+const heroImage = "/Nealle.webp";
 const heroImageAlt = "Nealle Page";
+const title = "Hello, I'm Nealle";
 const heroText = "With Fintech, eCommerce,and SaaS experience";
 const tagline =
-  "An experienced Product Manager that thrives solving complex problems and building products that people love to use.";
+  "An experienced Product Manager that thrives on solving complex problems and building products that people love to use.";
 ---
 
-<article class="text-slate-100">
+<article class="isolate text-slate-950">
   <div
-    class="min-h-[50vh] bg-slate-950 p-1 border-8 rounded-lg border-slate-600 shadow-2xl"
+    class=" bg-slate-400 p-1 border-4 rounded-lg border-slate-500
+  shadow-2xl min-h-[50vh] h-fit"
   >
-    <div class="flex flex-col p-2 rounded-lg md:flex-row">
-      <div
-        id="left"
-        class="justify-between w-full rounded-lg md:w-2/3 text-baby_powder"
-      >
-        <h1 class="text-2xl tracking-tight leading-1 md:text-4xl">
-          🧑‍🚀 Hello, I'm Nealle 🚀
+    <div class="flex p-2 rounded-lg float-left">
+      <img
+        src={heroImage}
+        alt={heroImageAlt}
+        width={500}
+        height={500}
+        class="border-2 border-white rounded-full w-24 h-24 md:w-36 md:h-36"
+      />
+      <div class="mr-4 p-4 flex flex-col">
+        <h1 class="text-4xl tracking-tight leading-1 md:text-6xl">
+          {title}
         </h1>
-        <h2 class="text-2xl font-bold md:text-4xl">
+        <h2 class="p-6 text-2xl font-bold md:text-4xl">
           {tagline}
         </h2>
-        <p class="text-2xl">{heroText}</p>
-      </div>
-      <div id="right" class="w-full h-auto md:w-1/3">
-        <img
-          src={heroImage}
-          alt={heroImageAlt}
-          width={1024}
-          height={1024}
-          class="rounded-XL"
-        />
+        <p class="pl-6 text-2xl">{heroText}</p>
       </div>
     </div>
   </div>
