@@ -1,11 +1,11 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Menu from "../components/newMenu.astro";
 import HomePageHero from "../components/HomePageHero.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import BlogLatest from "../components/BlogLatest.astro";
-import MenuLG from "../components/MenuLG.astro";
+import Menu from "../components/MenuLG.astro";
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -13,12 +13,14 @@ import MenuLG from "../components/MenuLG.astro";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
+  <ViewTransitions />
+
   <body class="bg-slate-200">
     <main class="container mx-auto pb-0">
       <HomePageHero />
     </main>
     <section id="Menu" class="container mx-auto">
-      <MenuLG />
+      <Menu />
     </section>
     <section id="blogLatest" class="container mx-auto pt-6">
       <BlogLatest />
