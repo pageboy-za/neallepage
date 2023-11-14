@@ -7,7 +7,8 @@ import Menu from "../components/Menu.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, heroImageAlt } =
+  Astro.props;
 ---
 
 <html lang="en">
@@ -44,7 +45,12 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
         <div class="block">
           {
             heroImage && (
-              <img width={1020} height={510} src={heroImage} alt="" />
+              <img
+                width={1020}
+                height={510}
+                src={heroImage}
+                alt={heroImageAlt}
+              />
             )
           }
         </div>
