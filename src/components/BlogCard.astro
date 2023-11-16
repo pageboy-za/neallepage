@@ -12,17 +12,15 @@ const {
   heroImageAlt,
   author,
 } = Astro.props;
-
-import {hero} from Astro.props.heroImage;
 ---
 
 <article class="px-2 pb-10 flex flex-col items-start justify-between">
   <div class="relative px-2 w-full">
-    <Image
-      src={hero}
+    <img
+      src={heroImage}
       alt={heroImageAlt}
-      height={hero.height}
-      width={hero.width}
+      height={1024}
+      width={768}
       class="aspect-ratio w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
     />
     <div

@@ -19,11 +19,13 @@ import { ViewTransitions } from "astro:transitions";
     <main class="container mx-auto pb-0">
       <HomePageHero />
     </main>
-    <section id="Menu" class="container mx-auto">
-      <Menu />
-    </section>
-    <section id="blogLatest" class="container mx-auto pt-6">
-      <BlogLatest />
+    <section id="below" class="relative">
+      <article id="Menu" class="container mx-auto py-6">
+        <Menu />
+      </article>
+      <article id="blogLatest" class="container mx-auto pt-6">
+        <BlogLatest />
+      </article>
     </section>
     <Footer />
     <!-- <Menu /> -->
