@@ -1,16 +1,29 @@
 ---
+import { Image } from "astro:assets";
 import FormattedDate from "./FormattedDate.astro";
 
-const { slug, title, description, pubDate, updatedDate, heroImage, author } =
-  Astro.props;
+const {
+  slug,
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  heroImage,
+  heroImageAlt,
+  author,
+} = Astro.props;
+
+import {hero} from Astro.props.heroImage;
 ---
 
 <article class="px-2 pb-10 flex flex-col items-start justify-between">
   <div class="relative px-2 w-full">
-    <img
-      src={heroImage}
-      alt=""
-      class="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
+    <Image
+      src={hero}
+      alt={heroImageAlt}
+      height={hero.height}
+      width={hero.width}
+      class="aspect-ratio w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
     />
     <div
       class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"
