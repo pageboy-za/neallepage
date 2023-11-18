@@ -10,16 +10,14 @@ const posts = publishedPosts.slice(0, 4);
 ---
 
 <article class="bg-slate-200 text-slate-950 pt-10">
-  <h1 class="font-serif text-2xl font-bold text-center">
+  <h1 class="font-serif text-5xl md:text-6xl font-bold text-center">
     The latest from my blog
   </h1>
-  <p class="mt-4 text-center text-slate-700">
+  <p class="mt-4 text-center text-2xl text-slate-700">
     I write about product development, design, techology and other things I find
     interesting.
   </p>
-  <div
-    class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3"
-  >
+  <div class="grid w-full px-4 gap-4 pb-4">
     {
       posts.map((post) => (
         <BlogCard

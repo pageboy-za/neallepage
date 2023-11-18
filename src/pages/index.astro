@@ -16,18 +16,18 @@ import { ViewTransitions } from "astro:transitions";
   <ViewTransitions />
 
   <body class="bg-slate-200">
-    <main class="container mx-auto pb-0">
+    <main class="pb-4">
       <HomePageHero />
     </main>
-    <section id="below" class="relative">
-      <article id="Menu" class="container mx-auto py-6">
-        <Menu />
-      </article>
-      <article id="blogLatest" class="container mx-auto pt-6">
+    <section id="below" class="pt-6">
+      <Menu />
+      <article id="blogLatest" class="mx-auto pt-6 px-10">
         <BlogLatest />
       </article>
     </section>
-    <Footer />
+    <footer>
+      <Footer />
+    </footer>
     <!-- <Menu /> -->
   </body>
 </html>

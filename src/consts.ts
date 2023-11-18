@@ -20,7 +20,7 @@ export const menuItems = {
     },
     {
       name: "Contact",
-      url: "/contact",
+      url: "#footer",
     },
   ],
 };

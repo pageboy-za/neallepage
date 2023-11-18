@@ -1,21 +1,17 @@
 ---
 import { menuItems } from "../consts";
-
-import MenuButton from "./MenuButton.astro";
-import MenuItem from "./MenuItem.astro";
 ---
 
-<div class="relative">
-  <MenuButton />
-</div>
-<article id="navmenu" class="absolute hidden mx-auto z-999">
-  <nav class="text-baby_powder bg-jet-100/90">
-    <div class="">
-      {
-        menuItems.items.map((data) => (
-          <MenuItem name={data.name} url={data.url} />
-        ))
-      }
-    </div>
-  </nav>
-</article>
+<nav>
+  <ul class="flex items-center gap-2">
+    {
+      menuItems.items.map((data) => (
+        <li class="">
+          <a href={data.url} class="px-4 h-10 hover:underline">
+            {data.name}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>

@@ -1,32 +1,43 @@
 ---
 const heroImage = "/Nealle.webp";
 const heroImageAlt = "Nealle Page";
-const title = "Hello, I'm Nealle";
+const title = "Hi, I'm Nealle";
 const heroText = "With Fintech, eCommerce, and SaaS experience";
 const tagline =
   "An experienced Product Manager that thrives on solving complex problems and building products that people love to use.";
 ---
 
-<article class="text-slate-300">
-  <div class="bg-gray-950 p-1 border-4 rounded-lg border-gray-700
-  shadow-2xl">
-    <div class="grid p-2 rounded-lg">
-      <div class="flex">
-        <img
-          src={heroImage}
-          alt={heroImageAlt}
-          width={500}
-          height={500}
-          class="border-2 border-white rounded-full w-16 h-16"
-        />
-        <h1 class="mr-6 pr-10 text-4xl tracking-tight leading-1 md:text-6xl">
+<article>
+  <div
+    class="grid w-full shadow-2xl shadow-slate-700 m-2 p-2 bg-zinc-200 rounded-2xl"
+  >
+    <div
+      class="grid grid-cols-1 gap-2 md:grid-cols-4 bg-zinc-950 text-slate-50 rounded-lg m-2 p-2"
+    >
+      <div class="grid place-content-center">
+        <div class="p-4">
+          <img
+            src={heroImage}
+            alt={heroImageAlt}
+            width={500}
+            height={500}
+            class="border-2 border-white rounded-full w-24 h-24 md:w-32 md:h-32 lg:h-48 lg:w-48"
+          />
+        </div>
+      </div>
+      <div class="grid md:col-span-3 content-center text-center md:text-left">
+        <h1
+          class="font-serif text-5xl md:text-8xl tracking-tight leading-1 lg:text-8xl leading-snug"
+        >
           {title}
         </h1>
       </div>
-      <div class="">
+      <div class="md:col-span-4">
         <h2 class="p-6 text-2xl font-bold md:text-4xl">
           {tagline}
         </h2>
+      </div>
+      <div class="md:col-span-4">
         <p class="pl-6 text-2xl">{heroText}</p>
       </div>
     </div>
